@@ -10,19 +10,103 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --slate-300: hsl(212, 45%, 89%);
+  --slate-500: hsl(216, 15%, 48%);
+  --slate-900: hsl(218, 44%, 22%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--slate-300);
+font-family: Outfit, sans-serif;
+}
+
+article {
+width: 80%;
+margin: 10% auto;
+background-color: white;
+padding: 10%;
+border-radius: 25px;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+border-radius: 15px;
+}
+.img-cover {
+object-fit: cover; }
+
+h1, h2 {
+width: 80%;
+margin: 0 auto;
+text-align: center;
+font-size: 1.5rem;
+}
+
+h1 {
+font-weight: 700;
+padding: 5%;
+}
+
+h2 {
+font-weight: 400;
+}
+
+@media screen and (min-width: 1440px), 
+screen and (orientation: landscape)
+ {
+  article {
+width: 30%;
+margin: 20% auto;
+padding: 1%;
+}
+
+h2 {
+padding-bottom: 5%;
+}
+
+h1, h2 {
+width: 90%;
+}
+
+img {
+border-radius: 10px;
+}
+
+}
+
+
+
+
+
+</style>
 </head>
 <body>
+<article>
+  <div><img class="img-cover" src="https://i.ibb.co/FHvC6D7/image-qr-code.png" alt=""/></div >
 
-  Improve your front-end skills by building projects
+  <h1>Improve your front-end skills by building projects</h1>
+  <h2>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</h2>
 
-  Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+</article>
 </body>
 </html>
