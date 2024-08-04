@@ -115,10 +115,10 @@ width: 50%;
   }
 }
 
-@media screen and (min-width: 1440px){
+@media screen and (min-width: 1000px){
   article{
     
-width: 25%;
+width: 30%;
 
   }
 }
