@@ -46,6 +46,7 @@ border: 0.1rem solid black;
   flex-direction: column;
   justify-content: center; 
    margin: 15.3rem 2.4rem;
+  gap: 24px;
 }
 
 
@@ -70,7 +71,6 @@ border-radius: 1rem;
 }
 
 .text{
-  margin-top:24px;
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
@@ -129,7 +129,6 @@ height: 63px;
 .author-wrapper {
 display: flex;
     align-items: center;
-    margin-top: 24px;
     width: 129px;
     height: 32px;
     justify-content: start;
@@ -153,39 +152,89 @@ width: 100%;
     line-height: 150%;
 }
 
+@media screen and (min-width: 600px){
+  body{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-/* @media screen and (min-width: 500px){
   article{
     
-width: 50%;
+width: 500px;
 
+    display: flex;
+gap: 24px;
   }
+  
+
+  .text > p {
+    font-size: 2rem;
+     width: 100px;
+  height: 38px;
+  }  
+  
+  .text > time {
+    font-size: 1.5rem;
+      text-wrap: nowrap;
+  }
+  
+  .text > h2{
+    font-size: 1.6rem;
+    height: 100%;
+  }
+  
 }
- */
+
+
+
 @media screen and (min-width: 1000px){
+  
+  body{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
   article{
     
- margin: 21.9rem 52.8rem;
-
+width: 384px;
+    height: 522px;
+    display: flex;
+gap: 24px;
   }
+  
+  
+  .text > h2 {
+
+ width: 279px;  
+
+}
+  
+ 
 }
 
+/* VERY SMALL SCREENS AND SMALLER */
+
+ @media screen and (max-width: 350px){
+   
+ .text > h1 {
+
+    font-size: 1.5rem;
+}
+
+.text > h2 {
+
+font-size: 1.05rem;
 
 
+}
+   
+   .author-wrapper > span {
 
+    font-size: 1rem;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+} 
+ 
 
