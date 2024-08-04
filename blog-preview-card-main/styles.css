@@ -152,6 +152,7 @@ width: 100%;
     line-height: 150%;
 }
 
+/* TABLET SCREENS */
 @media screen and (min-width: 600px){
   body{
         display: flex;
@@ -187,8 +188,8 @@ gap: 24px;
 }
 
 
-
-@media screen and (min-width: 1000px){
+/* DESKTOP SCREENS */
+@media screen and (min-width: 1440px){
   
   body{
         display: flex;
