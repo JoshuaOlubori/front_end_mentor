@@ -1,24 +1,22 @@
-
-
 :root {
---ratio: 1.5;
---s-5: calc(var(--s-4) / var(--ratio));
---s-4: calc(var(--s-3) / var(--ratio));
---s-3: calc(var(--s-2) / var(--ratio));
---s-2: calc(var(--s-1) / var(--ratio));
---s-1: calc(var(--s0) / var(--ratio));
---s0: 1rem;
---s1: calc(var(--s0) * var(--ratio));
---s2: calc(var(--s1) * var(--ratio));
---s3: calc(var(--s2) * var(--ratio));
---s4: calc(var(--s3) * var(--ratio));
---s5: calc(var(--s4) * var(--ratio));
-  
-   --yellow: hsl(47, 88%, 63%);
+  --ratio: 1.5;
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
+
+  --yellow: hsl(47, 88%, 63%);
   --white: hsl(0, 0%, 100%);
   --gray-500: hsl(0, 0%, 42%);
   --gray-950: hsl(0, 0%, 7%);
-  
+
   --edge-x: 2.4rem;
   --edge-y: 15.3rem;
   --article-padding: 2.4rem;
@@ -34,58 +32,141 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td, time,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+time,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-line-height: 1; 
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 html {
-  font-size: 62.5%; 
+  font-size: 62.5%;
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
-
 
 /* 
 box-l {
@@ -97,40 +178,37 @@ box-l {
   outline-offset: calc(var(--border-thin) * -1);
 } */
 
-body{
-
+body {
   background-color: var(--yellow);
- font-family: "Figtree", sans-serif;
+  font-family: "Figtree", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-    display: flex;
-    align-items: center;
-    height: 100vh;
- 
+  display: flex;
+  align-items: center;
+  height: 100vh;
 }
-
-
 
 .article_center {
-/* ↓ Remove padding from the width calculation */
-box-sizing: border-box;
-/* ↓ The maximum width is the maximum measure */
-max-inline-size: 32.7rem;
-/* ↓ Only affect horizontal margins */
-margin-inline: auto;
-/* ↓ Apply the minimum horizontal space */
+  /* ↓ Remove padding from the width calculation */
+  box-sizing: border-box;
+  /* ↓ The maximum width is the maximum measure */
+  max-inline-size: 32.7rem;
+  /* ↓ Only affect horizontal margins */
+  margin-inline: auto;
+  /* ↓ Apply the minimum horizontal space */
   padding: var(--article-padding);
-  
+
   background-color: white;
-border: 0.1rem solid black;
+  border: 0.1rem solid black;
   border-radius: var(--article-border-radius);
 
-  box-shadow: 8px 8px 0 black, 
+  box-shadow:
+    8px 8px 0 black,
     0px 4px 4px rgba(0, 0, 0, 0.25);
- 
 }
 
-.stack_article, .stack_text {
+.stack_article,
+.stack_text {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -145,76 +223,75 @@ border: 0.1rem solid black;
 }
 
 .frame_blog_card {
---n: 279; /* numerator */
---d: 200; /* denominator */
- aspect-ratio: var(--n) / var(--d); 
-overflow: hidden;
-display: flex;
-justify-content: center;
-align-items: center;
-/* inline-size: var(--s3);
+  --n: 279; /* numerator */
+  --d: 200; /* denominator */
+  aspect-ratio: var(--n) / var(--d);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* inline-size: var(--s3);
 block-size: var(--s3);  */
   border-radius: var(--blog-image-radius);
 }
 
-.frame_blog_card > img{
-inline-size: 100%;
-block-size: 100%;
-object-fit: cover;
+.frame_blog_card > img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
 }
 
-
-
 .stack_text > h1 {
- font-weight: 800;
+  font-weight: 800;
   font-size: 2rem;
-color: var(--gray-950);
+  color: var(--gray-950);
   line-height: var(--150);
 }
 
 .stack_text > h2 {
- font-weight: 500;
+  font-weight: 500;
   font-size: 1.4rem;
-color: var(--gray-500);
+  color: var(--gray-500);
   line-height: var(--150);
 }
 
-
-.stack_text > div{
-width: fit-content; 
-   border-radius: 4px;
-   background-color: var(--yellow);
+.stack_text > h1 > a:hover {
+  color: var(--yellow);
 }
 
-.stack_text > div > p{
+.stack_text > div {
+  width: fit-content;
+  border-radius: 4px;
+  background-color: var(--yellow);
+}
+
+.stack_text > div > p {
   font-weight: 800;
   font-size: 1.2rem;
-color: var(--gray-950);
-   padding: 4px 12px;
-  line-height: var(--150); 
+  color: var(--gray-950);
+  padding: 4px 12px;
+  line-height: var(--150);
 }
 
 .center_tag {
-font-weight: 800;
-border-radius: 0.2rem;
-color: var(--gray-950); 
-  
+  font-weight: 800;
+  border-radius: 0.2rem;
+  color: var(--gray-950);
 }
 
 .center_tag > p {
   background-color: var(--yellow);
   display: inline-block;
-/* ↓ Remove padding from the width calculation */
-box-sizing: content-box;
-/* ↓ The maximum width is the maximum measure */
-max-inline-size: 60ch;
-/* ↓ Only affect horizontal margins */
-margin-inline: auto;
-/* ↓ Apply the minimum horizontal space */
-/* padding-inline-start: var(--s2);
+  /* ↓ Remove padding from the width calculation */
+  box-sizing: content-box;
+  /* ↓ The maximum width is the maximum measure */
+  max-inline-size: 60ch;
+  /* ↓ Only affect horizontal margins */
+  margin-inline: auto;
+  /* ↓ Apply the minimum horizontal space */
+  /* padding-inline-start: var(--s2);
 padding-inline-end: var(--s2); */
   padding: var(--s-1);
-
 }
 
 time {
@@ -225,14 +302,14 @@ time {
 }
 
 .cluster_author {
-/* ↓ Set the Flexbox context */
-display: flex;
-/* ↓ Enable wrapping */
-flex-wrap: wrap;
-/* ↓ Set the space/gap */
-gap: var(--s-1);
-/* ↓ Choose your alignment (flex-start is default) */
-align-items: center;
+  /* ↓ Set the Flexbox context */
+  display: flex;
+  /* ↓ Enable wrapping */
+  flex-wrap: wrap;
+  /* ↓ Set the space/gap */
+  gap: var(--s-1);
+  /* ↓ Choose your alignment (flex-start is default) */
+  align-items: center;
 }
 .cluster_author span {
   font-weight: 800;
@@ -242,64 +319,56 @@ align-items: center;
 }
 
 .frame_avatar {
---n: 1; /* numerator */
---d: 1; /* denominator */
-aspect-ratio: var(--n) / var(--d);
-overflow: hidden;
-display: flex;
-justify-content: center;
-align-items: center;
-inline-size: 3.2rem;
-block-size: 3.2rem;
+  --n: 1; /* numerator */
+  --d: 1; /* denominator */
+  aspect-ratio: var(--n) / var(--d);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inline-size: 3.2rem;
+  block-size: 3.2rem;
 }
 
-.frame_avatar> img{
-inline-size: 100%;
-block-size: 100%;
-object-fit: cover;
+.frame_avatar > img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
 }
 
-
-.attribution{
+.attribution {
   position: relative;
-top: 40px
+  top: 40px;
 }
 
-@media screen and (min-width: 1440px){
-  .article_center{
-
-max-inline-size: 38.4rem;
-/* ↓ Only affect horizontal margins */
-margin-inline: auto;
-/* ↓ Apply the minimum horizontal space */
-  padding: var(--article-padding);
+@media screen and (min-width: 1440px) {
+  .article_center {
+    max-inline-size: 38.4rem;
+    /* ↓ Only affect horizontal margins */
+    margin-inline: auto;
+    /* ↓ Apply the minimum horizontal space */
+    padding: var(--article-padding);
     margin-top: 21.9rem;
     margin-bottom: 21.9rem;
   }
 
   .frame_blog_card {
---n: 336; /* numerator */
---d: 200; /* denominator */
- aspect-ratio: var(--n) / var(--d); 
+    --n: 336; /* numerator */
+    --d: 200; /* denominator */
+    aspect-ratio: var(--n) / var(--d);
+  }
 
-}
-  
   .stack_text > h1 {
+    font-size: 2.4rem;
+  }
+  .stack_text > div > p {
+    font-size: 1.4rem;
+  }
 
-  font-size: 2.4rem;
-
-}
- .stack_text > div > p{
-
-  font-size: 1.4rem;
-}
-  
   time {
-  font-size: 1.4rem;
-}
+    font-size: 1.4rem;
+  }
   .stack_text > h2 {
-  font-size: 1.6rem;
-
-}
-
+    font-size: 1.6rem;
+  }
 }
