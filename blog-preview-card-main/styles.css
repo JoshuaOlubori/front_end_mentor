@@ -265,7 +265,7 @@ object-fit: cover;
 top: 40px
 }
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 1440px){
   .article_center{
 
 max-inline-size: 38.4rem;
