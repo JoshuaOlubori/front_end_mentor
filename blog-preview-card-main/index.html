@@ -1,38 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <script src="https://fb.me/react-with-addons-15.1.0.js"></script>
+    <script src="https://fb.me/react-dom-15.1.0.js"></script>
+    <script src="https://static.jsbin.com/js/vendor/traceur.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.1/processing-api.min.js"></script>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-<title>Frontend Mentor | Blog Preview Card</title>
-<link rel="stylesheet" href="https://yarnpkg.com/en/package/normalize.css"/>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-  <link href="./styles.css" rel="stylesheet">
-
-  
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Blog Preview Card</title>
+    <link
+      rel="stylesheet"
+      href="https://yarnpkg.com/en/package/normalize.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./styles.css" rel="stylesheet" />
   </head>
-<body>
-<article>
-  <div class= "card-cover"><img src="https://svgshare.com/i/18zE.svg" alt="article card image"></div>
-  
-<div class = "text">
-  
- <p>Learning
-  </p>
- <time datetime="2019-12-23">Published 23 Dec 2019</time> 
-  
-<h1>HTML & CSS foundations</h1>
-  <h2>These languages are the backbone of every website, defining structure, content, and presentation.
-</h2></div>
-  
-  <div class="author-wrapper"><div class = "author-avatar" ><img src="https://i.ibb.co/5G3kvj9/image-avatar.webp" alt="publisher avatar"></div><span>Greg Hooper</span></div>
-</article>
-    <div class="attribution">
+  <body>
+    <article class="article_center">
+      <div class="stack_article">
+        <div class="frame_blog_card">
+          <img src="https://svgshare.com/i/18zE.svg" alt="article card image" />
+        </div>
+
+        <div class="stack_text">
+          <div>
+            <p>Learning</p>
+          </div>
+          <time datetime="2019-12-23">Published 23 Dec 2019</time>
+
+          <h1><a>HTML & CSS foundations</a></h1>
+          <h2>
+            These languages are the backbone of every website, defining
+            structure, content, and presentation.
+          </h2>
+        </div>
+
+        <div class="cluster_author">
+          <div class="frame_avatar">
+            <img
+              src="https://i.ibb.co/5G3kvj9/image-avatar.webp"
+              alt="publisher avatar"
+            />
+          </div>
+          <span>Greg Hooper</span>
+        </div>
+      </div>
+    </article>
+    <!--   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Edun Joshua</a>.
   </div>
-</body>
+     -->
+  </body>
 </html>
