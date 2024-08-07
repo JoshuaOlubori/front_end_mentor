@@ -1,0 +1,348 @@
+:root {
+  
+  --green: hsl(75, 94%, 57%);
+
+--white: hsl(0, 0%, 100%);
+
+--grey-700: hsl(0, 0%, 20%);
+--grey-800: hsl(0, 0%, 12%);
+--grey-900: hsl(0, 0%, 8%);
+}
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+time,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+ /*    font-size: 150%; */
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/*
+box-l {
+  display: block;
+  padding: var(--s1);
+  border-width: var(--border-thin);
+  ↓ For high contrast mode
+  outline: var(--border-thin) solid transparent;
+  outline-offset: calc(var(--border-thin) * -1);
+} */
+
+body {
+
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    display: flex;
+  background-color: var(--grey-900);
+  display: flex;
+  align-items: center;
+  height: 100vh;
+
+}
+
+
+main {
+    /* ↓ The flex context */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  
+  align-items: center;
+  border-radius: 0.4rem;
+  background-color: var(--grey-800);
+  
+
+}
+main > * {
+    /* ↓ Any extant vertical margins are removed */ margin-block: 0;
+ 
+}
+
+main > * + * {
+    /* ↓ Top margin is only applied to successive elements */
+    /* margin-block-start: var(--space, 1.5rem ); */
+    margin-block-start: 0;
+}
+
+main > :nth-child(2) {
+    margin-top: 1.1rem;
+    /* Adjust the margin-top value as needed */
+}
+
+
+
+
+
+.name_tag {
+    /* ↓ The flex context */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.name_tag :nth-child(2) {
+    margin-top: 0.45rem;
+    /* Adjust the margin-top value as needed */
+}
+
+.name_tag :nth-child(3) {
+    margin-top: 1.17rem;
+    /* Adjust the margin-top value as needed */
+}
+
+.name_tag > h1 {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--white);
+}
+
+.name_tag > address {
+  font-weight: 600;
+  font-size: 0.64rem;
+  color: var(--green);
+}
+
+.name_tag > blockquote {
+  font-weight: 400;
+  font-size: 0.6rem;
+  color: var(--white);
+}
+
+
+
+.skills_list {
+    /* ↓ The flex context */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1.2rem;
+  margin-bottom: 1.1rem;
+
+}
+
+.skills_list > * {
+    /* ↓ Any extant vertical margins are removed */
+    margin-block: 0;
+}
+
+.skills_list > * + * {
+    /* ↓ Top margin is only applied to successive elements */
+    margin-block-start: 0.6rem;
+}
+
+.skills_list > li {
+   
+  border-radius: 0.3rem;
+  background-color: var(--grey-700);
+
+display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+.skills_list > li:hover {
+   
+  background-color: var(--green);
+}
+
+.skills_center > li > a {
+     font-weight: 600;
+  font-size: 0.65rem;
+  color: var(--white);
+text-align: center;
+  text-decoration: none;
+}
+
+.skills_center > li:hover > a {
+color: var(--grey-700);
+}
+
+
+
+.main_center, .desc_center{
+/* ↓ Remove padding from the width calculation */ box-sizing: content-box; /* ↓ The maximum width is the maximum measure */ 
+max-inline-size: 60ch; /* ↓ Only affect horizontal margins */
+margin-inline: auto; /* ↓ Apply the minimum horizontal space */ 
+padding-inline-start: 1rem; 
+padding-inline-end: 1rem;;
+text-align: center;
+}
+
+
+
+.desc_center {
+    
+    padding-inline-start: var(--s0); 
+padding-inline-end: var(--s0);
+
+}
+
+.skills_center{
+
+  
+}
+
+.frame {
+    --n: 1;
+ --d: 1;
+    aspect-ratio: var(--n) / var(--d);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+    border-radius: 50%;
+     inline-size: 4.1rem;
+  block-size: 4.1rem;
+  margin-top: 0.8rem;
+   
+}
+
+.frame > img {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+    align-self: center;
+}
