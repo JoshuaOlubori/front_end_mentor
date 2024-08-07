@@ -140,11 +140,10 @@ table {
 }
 
 html {
-    font-size: 100%;
+    font-size: 150%;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
   font-style: normal;
 }
 
@@ -155,15 +154,7 @@ html {
     box-sizing: inherit;
 }
 
-/*
-box-l {
-  display: block;
-  padding: var(--s1);
-  border-width: var(--border-thin);
-  ↓ For high contrast mode
-  outline: var(--border-thin) solid transparent;
-  outline-offset: calc(var(--border-thin) * -1);
-} */
+
 
 body {
 
@@ -326,7 +317,8 @@ padding-inline-end: var(--s0);
 
 .frame {
     --n: 1;
- --d: 1;
+    /* numerator */ --d: 1;
+    /* denominator */ 
     aspect-ratio: var(--n) / var(--d);
     overflow: hidden;
     display: flex;
@@ -345,4 +337,24 @@ padding-inline-end: var(--s0);
     block-size: 100%;
     object-fit: cover;
     align-self: center;
+}
+
+
+
+
+@media screen and (min-width: 1440px) {
+ html {
+    font-size: 120%;
+}
+  
+  main {
+width: clamp(10%, 20%, 28rem);
+  }
+  
+  .main_center, .desc_center{
+
+padding-inline-start: 1.5rem; 
+padding-inline-end: 1.5rem;;
+
+}
 }
