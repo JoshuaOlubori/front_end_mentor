@@ -1,0 +1,308 @@
+:root {
+  --ratio: 1.5;
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
+
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%); 
+  }
+
+  /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 62.5%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+  background-color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.switcher {
+  --gutter: 0;
+    display: flex;
+    flex-direction: column; /* Set initial layout to vertical */
+    /* ↓ The default value is the first point on the modular scale */
+    gap: var(--gutter, var(--s1));
+    /* ↓ The width at which the layout “breaks” */
+    --threshold: 300px;
+  }
+  
+  .switcher > * {
+    /* ↓ Switch the layout at the --threshold */
+    flex-basis: calc((100% - var(--threshold)) * 999);
+  }
+  
+
+    
+  
+    
+
+  .main_box {
+
+    padding-inline: var(--s1);
+    /* ↓ Assumes you have a --border-thin var */
+    /* border: var(--border-thin) solid; */
+   
+    }
+
+    .text_box {
+      /* ↓ Padding set to the first point on the modular scale */
+      padding: var(--s1);
+      /* ↓ Assumes you have a --border-thin var */
+      /* border: var(--border-thin) solid; */
+      /* ↓ Always apply the transparent outline, for high contrast mode */
+      outline: var(--border-thin) transparent;
+      outline-offset: calc(var(--border-thin) * -1);
+      /* ↓ The light and dark color vars */
+      --color-light: #fff;
+      --color-dark: #000;
+      color: var(--color-dark);
+      background-color: var(--color-light);
+      border-radius: 0 0 15px 15px;
+      }
+    
+
+  .frame {
+    --n: 16; /* numerator */
+    --d: 9; /* denominator */
+    aspect-ratio: var(--n) / var(--d);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px 15px 0px 0px;
+    }
+    .frame > img,
+    .frame > video {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+    border-radius: var(--s-2) var(--s-2) 0 0;
+    }
+
+
+    .stack {
+      /* ↓ The flex context */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      }
+      .stack > * {
+      /* ↓ Any extant vertical margins are removed */
+      margin-block: 0;
+      }
+      .stack > * + * {
+      /* ↓ Top margin is only applied to successive elements */
+      margin-block-start: var(--space, 1.5rem);
+      }
+
+      .stack > h2 {
+  
+          font-family: "Montserrat", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 500;
+          font-style: normal;
+          letter-spacing: var(--s-3);
+          color: var(--dark-grayish-blue);
+       
+      }
+      
+      .stack > p {
+  
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        color: var(--dark-grayish-blue);
+        line-height: 2;
+        
+    }
+
+      
+      .stack > h1 {
+  
+        font-family: "Fraunces", serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-variation-settings:
+          "SOFT" 0,
+          "WONK" 0;
+          font-size: 2.5rem;
+          color: var(--very-dark-blue);
+    }
+
+    .cluster > span:first-child {
+      font-family: "Fraunces", serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-variation-settings:
+          "SOFT" 0,
+          "WONK" 0;
+          font-size: 2.5rem;
+          color: var(--dark-cyan);
+    }
+
+    .cluster > span:nth-child(2) {
+      font-family: "Fraunces", serif;
+        font-optical-sizing: auto;
+        font-weight: 200;
+        font-style: normal;
+        font-variation-settings:
+          "SOFT" 0,
+          "WONK" 0;
+          font-size: 1rem;
+          text-decoration:line-through;
+          color: var(--dark-grayish-blue);
+          
+    }
+
+    .cart {
+      background-color: var(--dark-cyan);
+      padding-block: var(--s1);
+      border-radius: var(--s-1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+          
+    }
+
+  
+  .cart:hover {
+    background-color: #004434;
+    cursor: pointer;     
+  }
+
+    .cart > p {
+      font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+      text-align: center;
+      color: var(--color-light);
+      font-size: var(--s0);
+
+    }
+
+
+    .cluster  p {
+      font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        color: var(--dark-grayish-blue);
+        line-height: 2;
+          
+    }
+
+    
+    
+    
+   
+  @media only screen and (min-width: 800px) {
+    .switcher {
+      flex-direction: row; /* Switch layout to horizontal above threshold */
+    }
+    .switcher > * {
+      /* ↓ Allow children to grow in horizontal layout */
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+
+    .frame > img,
+    .frame > video {
+     
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+    border-radius: 0 0 0 0;
+    }
+
+    .main_box{
+      padding: 0;
+    }
+
+          
+  .main_center {
+    /* ↓ Remove padding from the width calculation */
+    box-sizing: content-box;
+    /* ↓ The maximum width is the maximum measure */
+    max-inline-size: 620px;
+    max-block-size: 440px;
+    /* ↓ Only affect horizontal margins */
+    margin-inline: auto;
+    /* ↓ Apply the minimum horizontal space */
+    padding-inline: 0;
+
+    }
+
+    .text_box{
+      border-radius: 0px 10px 10px 0px;
+      padding: var(--s2)
+    }
+       
+
+    .frame{
+      border-radius: 10px 0 0 10px; 
+    }
+  
+
+  }
