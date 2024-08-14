@@ -112,4 +112,23 @@
          </article>
       </main>
    </body>
+   <script>
+      
+  // Function to automatically number the list items
+  function autoNumberList() {
+    const listItems = document.querySelectorAll('.instruct_list_stack > div');
+    
+    listItems.forEach((item, index) => {
+      // Find the div that should hold the number (assumed to be the first child div)
+      const numberDiv = item.querySelector('div:first-child');
+      if (numberDiv) {
+        numberDiv.textContent = `${index + 1}.`; // Set the number
+      }
+    });
+  }
+
+  // Run the function to number the list
+  autoNumberList();
+
+   </script>
 </html>
