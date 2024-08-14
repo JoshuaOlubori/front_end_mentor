@@ -1,0 +1,583 @@
+:root {
+
+
+	--white: hsl(0, 0%, 100%);
+	--stone-100: hsl(30, 54%, 90%);
+	--stone-150: hsl(30, 18%, 87%);
+	--stone-600: hsl(30, 10%, 34%);
+	--stone-900: hsl(24, 5%, 18%);
+	--brown-800: hsl(14, 45%, 36%);
+	--rose-800: hsl(332, 51%, 32%);
+	--rose-50: hsl(330, 100%, 98%);
+
+	--ratio: 1.5;
+	--s-5: calc(var(--s-4) / var(--ratio));
+	--s-4: calc(var(--s-3) / var(--ratio));
+	--s-3: calc(var(--s-2) / var(--ratio));
+	--s-2: calc(var(--s-1) / var(--ratio));
+	--s-1: calc(var(--s0) / var(--ratio));
+	--s0: 1rem;
+	--s1: calc(var(--s0) * var(--ratio));
+	--s2: calc(var(--s1) * var(--ratio));
+	--s3: calc(var(--s2) * var(--ratio));
+	--s4: calc(var(--s3) * var(--ratio));
+	--s5: calc(var(--s4) * var(--ratio));
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video  {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	/*    font-size: 150%; */
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+	font-size: 62.5%;
+
+}
+
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: "Outfit", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.6rem;
+	line-height: 150%;
+	color: var(--stone-600);
+}
+
+.main_center {
+	/* ↓ Remove padding from the width calculation */
+	box-sizing: content-box;
+	/* ↓ The maximum width is the maximum measure */
+	max-inline-size: 60ch;
+	/* ↓ Only affect horizontal margins */
+	margin-inline: auto;
+	/* ↓ Apply the minimum horizontal space */
+	padding-inline-start: var(--s0);
+	padding-inline-end: var(--s0);
+  background-color: var(--white);
+   border-radius: var(--s2);
+}
+
+
+.frame {
+
+	--n: 16;
+	/* numerator */
+	--d: 9;
+	/* denominator */
+	aspect-ratio: var(--n) / var(--d);
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.frame>img,
+.frame>video {
+	inline-size: 100%;
+	block-size: 100%;
+	object-fit: cover;
+  
+}
+
+.main_box {
+	/* ↓ Padding set to the first point on the modular scale */
+	padding: var(--s2);
+	/* ↓ Assumes you have a --border-thin var */
+	border: var(--border-thin) solid;
+	/* ↓ Always apply the transparent outline, for high contrast mode */
+	outline: var(--border-thin) transparent;
+	outline-offset: calc(var(--border-thin) * -1);
+	/* ↓ The light and dark color vars */
+	--color-light: #fff;
+	--color-dark: #000;
+	color: var(--color-dark);
+	background-color: var(--color-light);
+}
+
+.main_box * {
+	/* ↓ Force colors to inherit from the parent   and honor inversion (below) */
+	color: inherit;
+}
+
+.main_box.invert {
+	/* ↓ The color vars inverted */
+	color: var(--color-light);
+	background-color: var(--color-dark);
+}
+
+
+/* HERO SECTION */
+.hero_box {
+	/* ↓ Padding set to the first point on the modular scale */
+	padding: var(--s1);
+	/* ↓ Assumes you have a --border-thin var */
+	border: var(--border-thin) solid;
+	/* ↓ Always apply the transparent outline, for high contrast mode */
+	outline: var(--border-thin) transparent;
+	outline-offset: calc(var(--border-thin) * -1);
+	/* ↓ The light and dark color vars */
+
+	color: var(--color-dark);
+	background-color: var(--color-light);
+}
+
+.hero_box * {
+	/* ↓ Force colors to inherit from the parent   and honor inversion (below) */
+}
+
+.box.invert {
+	/* ↓ The color vars inverted */
+	color: var(--color-light);
+	background-color: var(--color-dark);
+}
+
+
+.hero_stack {
+	/* ↓ The flex context */
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.hero_stack>* {
+	/* ↓ Any extant vertical margins are removed */
+	margin-block: 0;
+}
+
+.hero_stack>*+* {
+	/* ↓ Top margin is only applied to successive elements */
+	margin-block-start: var(--s2);
+}
+
+
+.hero_text_stack {
+	/* ↓ The flex context */
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.hero_text_stack>* {
+	/* ↓ Any extant vertical margins are removed */
+	margin-block: 0;
+}
+
+.hero_text_stack>*+* {
+	/* ↓ Top margin is only applied to successive elements */
+	margin-block-start: var(--s2);
+}
+
+.hero_text_stack>h1 {
+	font-family: "Young Serif", serif;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 100%;
+	font-size: var(--s3);
+	color: var(--stone-900);
+
+}
+
+/* PREPARATION TIME */
+
+.ptime_box {
+	/* ↓ Padding set to the first point on the modular scale */
+	padding: var(--s1);
+	/* ↓ Assumes you have a --border-thin var */
+	border: var(--border-thin) solid;
+	/* ↓ Always apply the transparent outline, for high contrast mode */
+	outline: var(--border-thin) transparent;
+	outline-offset: calc(var(--border-thin) * -1);
+
+	color: var(--color-dark);
+	background-color: var(--rose-50);
+	border-radius: var(--s-2);
+}
+
+.ptime_box * {
+	/* ↓ Force colors to inherit from the parent   and honor inversion (below) */
+	color: inherit;
+}
+
+.ptime_box.invert {
+	/* ↓ The color vars inverted */
+	color: var(--color-light);
+	background-color: var(--color-dark);
+}
+
+.ptime_box>h2 {
+	color: var(--rose-800);
+	font-weight: 700;
+	margin-bottom: var(--s-1);
+}
+
+.ptime_box .first-word {
+	font-weight: 700;
+  color: var(--stone-900);
+}
+
+.ptime_list_stack {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.ptime_list_stack>* {
+	/* ↓ Any extant vertical margins are removed */
+	margin-block: 0;
+}
+
+.ptime_list_stack>*+* {
+	/* ↓ Top margin is only applied to successive elements */
+	margin-block-start: var(--s-1);
+}
+
+.ptime_list_stack {
+	list-style-type: disc;
+	list-style-position: inside;
+	margin-left: var(--s1);
+}
+
+
+/* INGREDIENTS */
+
+.ingredients_box {
+	/* ↓ Padding set to the first point on the modular scale */
+	padding: var(--s1);
+	/* ↓ Assumes you have a --border-thin var */
+	border-bottom: 1px var(--stone-150) solid;
+	/* ↓ Always apply the transparent outline, for high contrast mode */
+	outline: var(--border-thin) transparent;
+	outline-offset: calc(var(--border-thin) * -1);
+
+	color: var(--color-dark);
+
+	margin-top: var(--s2);
+  padding-bottom: var(--s3);
+}
+
+.ingredients_box * {
+	/* ↓ Force colors to inherit from the parent   and honor inversion (below) */
+	color: inherit;
+}
+
+.ingredients_box.invert {
+	/* ↓ The color vars inverted */
+	color: var(--color-light);
+	background-color: var(--color-dark);
+}
+
+.ingredients_box>h2 {
+
+	font-family: "Young Serif", serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: var(--s2);
+	color: var(--brown-800);
+	font-weight: 700;
+	margin-bottom: var(--s-1);
+}
+
+.ingredients_list_stack {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+
+	list-style-type: disc;
+	list-style-position: inside;
+	margin-left: var(--s1);
+	margin-top: var(--s2);
+
+}
+
+.ingredients_list_stack>* {
+	/* ↓ Any extant vertical margins are removed */
+	margin-block: 0;
+}
+
+.ingredients_list_stack>*+* {
+	/* ↓ Top margin is only applied to successive elements */
+	margin-block-start: var(--s0);
+}
+
+
+/* INSTRUCTIONS */
+
+.instruct_box {
+	/* ↓ Padding set to the first point on the modular scale */
+	padding: var(--s1);
+	/* ↓ Assumes you have a --border-thin var */
+	border-bottom: 1px var(--stone-150) solid;
+	/* ↓ Always apply the transparent outline, for high contrast mode */
+	outline: var(--border-thin) transparent;
+	outline-offset: calc(var(--border-thin) * -1);
+
+	color: var(--color-dark);
+
+	margin-top: var(--s2);
+  padding-bottom: var(--s3);
+}
+
+.instruct_box * {
+	/* ↓ Force colors to inherit from the parent   and honor inversion (below) */
+	color: inherit;
+}
+
+.instruct_box.invert {
+	/* ↓ The color vars inverted */
+	color: var(--color-light);
+	background-color: var(--color-dark);
+}
+
+.instruct_box>h2 {
+
+	font-family: "Young Serif", serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: var(--s2);
+	color: var(--brown-800);
+	font-weight: 700;
+	margin-bottom: var(--s-1);
+}
+
+.instruct_list_stack {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	list-style-type: decimal;
+	list-style-position: inside;
+	margin-left: var(--s1);
+	margin-top: var(--s2);
+  
+
+}
+
+.instruct_list_stack>* {
+	/* ↓ Any extant vertical margins are removed */
+	margin-block: 0;
+  display: flex; 
+  gap:  var(--s2);
+ 
+}
+
+.instruct_list_stack>*+* {
+	/* ↓ Top margin is only applied to successive elements */
+	margin-block-start: var(--s0);
+}
+
+.instruct_list_stack>li::marker {
+	font-weight: 700;
+}
+
+
+
+.instruct_list_stack > div> div:first-child {
+  font-weight: 700;
+  color: var(--brown-800);
+}
+
+
+/* NUTRITION */
+
+.nutrition_box {
+	/* ↓ Padding set to the first point on the modular scale */
+	padding: var(--s1);
+	/* ↓ Assumes you have a --border-thin var */
+	border-bottom: 1px var(--stone-100) solid;
+	/* ↓ Always apply the transparent outline, for high contrast mode */
+	outline: var(--border-thin) transparent;
+	outline-offset: calc(var(--border-thin) * -1);
+
+	color: var(--color-dark);
+  padding-top: var(--s3);
+
+	
+}
+
+.nutrition_box * {
+	/* ↓ Force colors to inherit from the parent   and honor inversion (below) */
+	color: inherit;
+}
+
+.nutrition_box.invert {
+	/* ↓ The color vars inverted */
+	color: var(--color-light);
+	background-color: var(--color-dark);
+}
+
+.nutrition_stack>h2 {
+
+	font-family: "Young Serif", serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: var(--s2);
+	color: var(--brown-800);
+	font-weight: 700;
+	margin-bottom: var(--s-1);
+}
+
+.nutrition_stack {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	list-style-type: decimal;
+	list-style-position: inside;
+	margin-left: var(--s1);
+
+
+}
+
+.nutrition_stack>* {
+	/* ↓ Any extant vertical margins are removed */
+	margin-block: 0;
+  display: flex; 
+  gap:  var(--s2);
+ 
+}
+
+.nutrition_stack>*+* {
+	/* ↓ Top margin is only applied to successive elements */
+	margin-block-start: var(--s0);
+}
+
+
+.nutrition_list_center{
+  /* ↓ Remove padding from the width calculation */
+box-sizing: content-box;
+/* ↓ The maximum width is the maximum measure */
+max-inline-size: 60ch;
+/* ↓ Only affect horizontal margins */
+margin-inline: auto;
+/* ↓ Apply the minimum horizontal space */
+padding-inline-start: var(--s1);
+padding-inline-end: var(--s1);
+}
+
+
+
+.nutrition_stack dl {
+    /* Description list layout with CSS Grid */
+    display: grid;
+    grid-template-columns: 150px 200px;
+  column: gap: 0;
+  
+    
+    line-height: 3;
+ 
+}
+.nutrition_stack dd{
+  color: var(--brown-800);
+  font-weight: 900;
+}
+
+.nutrition_stack dt, .nutrition_stack dd {
+   padding: 0 0 0 var(--s3);
+}
+.nutrition_stack dt:not(:last-of-type), .nutrition_stack dd:not(:last-of-type) {
+  border-bottom: 1px var(--stone-150) solid;
+}
+
+
+
+
+
+@media only screen and (min-width: 1024px){
+  .main_box{
+    background-color: var(--stone-100);
+  } 
+  
+  .frame {
+
+  padding: 20px 10px;
+}
+
+.frame>img,
+.frame>video {
+  border-radius: var(--s-1);
+}
+}
+
+@media only screen and (max-width: 500px){
+  
+  body{
+     overflow-x: hidden;
+  }
+   .frame {
+     margin-inline: -33px; 
+     
+        /* Ensure the container doesn't exceed the viewport width */
+  /* Hide any overflow content horizontally */
+ 
+   }  
+}
