@@ -280,7 +280,7 @@ table {
     box-sizing: content-box;
     /* ↓ The maximum width is the maximum measure */
     max-inline-size: 620px;
-    max-block-size: 440px;
+/*     max-block-size: 440px; */
     /* ↓ Only affect horizontal margins */
     margin-inline: auto;
     /* ↓ Apply the minimum horizontal space */
