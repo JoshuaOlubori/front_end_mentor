@@ -123,13 +123,10 @@ table {
     --d: 9; /* denominator */
     aspect-ratio: var(--n) / var(--d);
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 15px 15px 0px 0px;
     }
     .frame > img,
-    .frame > video {
+    .frame > source {
     inline-size: 100%;
     block-size: 100%;
     object-fit: cover;
@@ -268,11 +265,8 @@ table {
     }
 
     .frame > img,
-    .frame > video {
+    .frame > source  {
      
-    inline-size: 100%;
-    block-size: 100%;
-    object-fit: cover;
     border-radius: 0 0 0 0;
     }
 
