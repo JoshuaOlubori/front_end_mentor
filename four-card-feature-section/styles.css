@@ -115,12 +115,10 @@ h1{
 box-l {
     display: block;
     padding: var(--s1);
-    border-width: var(--border-thin);
-    /* ↓ For high contrast mode */
-    outline: var(--border-thin) solid transparent;
-    outline-offset: calc(var(--border-thin) * -1);
     
   }
+
+  
 
   cover-l {
     display: flex;
@@ -299,134 +297,4 @@ stack-l {
 }
 
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-header h1 {
-    font-size: 2.5em;
-    margin: 0;
-    font-weight: 700;
-}
-
-header h2 {
-    font-size: 1.5em;
-    color: #555;
-    margin: 10px 0;
-    font-weight: 500;
-}
-
-header p {
-    color: #777;
-    font-size: 1.1em;
-}
-
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    flex: 1 1 calc(25% - 20px);
-    max-width: calc(25% - 20px);
-}
-
-.card h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-.card p {
-    color: #555;
-    font-size: 0.95em;
-}
-*/
-
-/* Specific styles for each card */
-/*
-.supervisor {
-    border-top: 5px solid #00bfa5;
-}
-
-.team-builder {
-    border-top: 5px solid #ff5252;
-}
-
-.karma {
-    border-top: 5px solid #ffab00;
-}
-
-.calculator {
-    border-top: 5px solid #2979ff;
-}
-    */
-
-
-/* Responsive Design for Mobile */
-/* @media (max-width: 768px) {
-    .card-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .card {
-        max-width: 90%;
-        margin-bottom: 20px;
-    }
-} */
 
