@@ -1,0 +1,212 @@
+
+:root {
+    --ratio: 1.5;
+    --s-5: calc(var(--s-4) / var(--ratio));
+    --s-4: calc(var(--s-3) / var(--ratio));
+    --s-3: calc(var(--s-2) / var(--ratio));
+    --s-2: calc(var(--s-1) / var(--ratio));
+    --s-1: calc(var(--s0) / var(--ratio));
+    --s0: 1rem;
+    --s1: calc(var(--s0) * var(--ratio));
+    --s2: calc(var(--s1) * var(--ratio));
+    --s3: calc(var(--s2) * var(--ratio));
+    --s4: calc(var(--s3) * var(--ratio));
+    --s5: calc(var(--s4) * var(--ratio));
+
+    --measure: 77%;
+
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+  
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    }
+  
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+     v2.0 | 20110126
+     License: none (public domain)
+  */
+  
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed, 
+  figure, figcaption, footer, header, hgroup, 
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      /* font: inherit; */
+      vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section {
+      display: block;
+  }
+  html{
+    font-size: 62.5%;
+  }
+  body {
+      line-height: 1;
+    display: flex;
+    align-items: center;
+    background-color: var( --light-grayish-blue);
+    font-size: 1.6rem;
+    height: 100dvh;
+     /* height: 100vh;  */
+/* DEFAULT FONT STYLES*/
+     font-family: "Barlow Semi Condensed", sans-serif;
+     font-weight: 500;
+     font-style: normal;
+     color: var(--white);
+  }
+  ol, ul {
+      list-style: none;
+  }
+  blockquote, q {
+      quotes: none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+      content: '';
+      content: none;
+  }
+  table {
+      border-collapse: collapse;
+      border-spacing: 0;
+  }
+
+  /* EVERY LAYOUT COMPONENTS */
+  box-l {
+    display: block;
+    padding: var(--s1);
+    border-width: var(--border-thin);
+    /* ↓ For high contrast mode */
+    outline: var(--border-thin) solid transparent;
+    outline-offset: calc(var(--border-thin) * -1);
+  }
+
+  center-l {
+    display: block;
+    box-sizing: content-box;
+    margin-inline: auto;
+    max-inline-size: var(--measure);
+  }
+  cover-l {
+    display: flex;
+    flex-direction: column;
+    min-block-size: 100vh;
+    padding: var(--s1);
+  }
+
+  stack-l {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  stack-l > * + * {
+    margin-block-start: var(--s1);
+  }
+
+  frame-l {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* CUSTOM */
+    border-radius: 50%;
+  }
+  
+  frame-l > img,
+  frame-l > video {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
+
+  cluster-l {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  /* CUSTOM STYLES */
+
+  .main-grid{
+    display: grid;
+    grid-template-areas: 
+    "purple purple grey white "
+    "small-white black black white ";
+    gap: 2rem;
+    
+  }
+
+  .name-tag {
+    text-align: start;
+    z-index: 2;
+  }
+
+  .name-tag > p:nth-child(1){
+    font-weight: 600;
+  }
+
+  .main-grid > box-l{
+    border-radius: 8px;
+  }
+
+  .main-grid > box-l:nth-child(1) {
+    grid-area: purple;
+    background-color: var(--moderate-violet);
+    font-weight: 100;
+    position: relative;
+  }
+
+  .main-grid > box-l:nth-child(2) {
+    grid-area: grey;
+    background-color: var(--very-dark-grayish-blue);
+  }
+
+  
+  .main-grid > box-l:nth-child(3) {
+    grid-area: small-white;
+    background-color: var(--white);
+    color: var(--very-dark-grayish-blue);
+  }
+
+  .main-grid > box-l:nth-child(4) {
+    grid-area: black;
+    background-color: var(--very-dark-blackish-blue);
+    color: var(--white);
+    
+  }
+
+  .main-grid > box-l:nth-child(5) {
+    grid-area: white;
+    background-color: var(--white);
+    color: var(--very-dark-grayish-blue);
+  }
+
+  .background-svg{
+    position: absolute;
+    top: 0;
+    right: 10%;
+    z-index: 1;
+  }
+  
+  .main-grid p {
+    line-height: 1.5;
+  }
+  
