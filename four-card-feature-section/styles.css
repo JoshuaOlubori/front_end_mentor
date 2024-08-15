@@ -1,0 +1,432 @@
+
+:root {
+    --ratio: 1.5;
+    --s-5: calc(var(--s-4) / var(--ratio));
+    --s-4: calc(var(--s-3) / var(--ratio));
+    --s-3: calc(var(--s-2) / var(--ratio));
+    --s-2: calc(var(--s-1) / var(--ratio));
+    --s-1: calc(var(--s0) / var(--ratio));
+    --s0: 1rem;
+    --s1: calc(var(--s0) * var(--ratio));
+    --s2: calc(var(--s1) * var(--ratio));
+    --s3: calc(var(--s2) * var(--ratio));
+    --s4: calc(var(--s3) * var(--ratio));
+    --s5: calc(var(--s4) * var(--ratio));
+  
+    --primary-red: hsl(0, 78%, 62%);
+    --primary-cyan: hsl(180, 62%, 55%);
+    --primary-orange: hsl(34, 97%, 64%);
+    --primary-blue: hsl(212, 86%, 64%);
+  
+    --neutral-very-dark-blue: hsl(234, 12%, 34%);
+    --neutral-grayish-blue: hsl(229, 6%, 66%);
+    --neutral-very-light-gray: hsl(0, 0%, 98%);
+    }
+  
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+     v2.0 | 20110126
+     License: none (public domain)
+  */
+  
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed, 
+  figure, figcaption, footer, header, hgroup, 
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      /* font: inherit; */
+      vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section {
+      display: block;
+  }
+  html{
+    font-size: 100%;
+  }
+  body {
+      line-height: 1;
+    background-color: var(--neutral-very-light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+  }
+  ol, ul {
+      list-style: none;
+  }
+  blockquote, q {
+      quotes: none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+      content: '';
+      content: none;
+  }
+  table {
+      border-collapse: collapse;
+      border-spacing: 0;
+  }
+
+  .header{
+    text-align: center;
+  }
+  .subtitle_text {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    color: var(--neutral-grayish-blue);
+    line-height: 2;
+  }
+
+  .subtitle {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+    font-size: var(--s1);
+    color: var(--neutral-very-dark-blue);
+    margin-block-end: 3.4rem;
+  }
+
+
+h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: var(--neutral-very-dark-blue);
+    margin-block-end: 2rem;
+}
+
+
+box-l {
+    display: block;
+    padding: var(--s1);
+    border-width: var(--border-thin);
+    /* ↓ For high contrast mode */
+    outline: var(--border-thin) solid transparent;
+    outline-offset: calc(var(--border-thin) * -1);
+    
+  }
+
+  cover-l {
+    display: flex;
+    flex-direction: column;
+    min-block-size: 100vh;
+    padding: var(--s1);
+  }
+
+center-l {
+  display: block;
+  box-sizing: content-box;
+  margin-inline: auto;
+  max-inline-size: var(--measure);
+}
+
+stack-l {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  stack-l > * + * {
+    margin-block-start: var(--s1);
+  }
+
+  .team-builder > stack-l > div,
+  .supervisor > stack-l > div,
+  .karma > stack-l > div,
+  .calculator > stack-l > div
+  {
+    align-self: end;
+  }
+  
+  .team-builder,
+  .supervisor,
+  .karma,
+  .calculator
+  {
+  
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  }
+
+  .supervisor{
+    border-top: 5px solid var(--primary-cyan);
+  }
+  .team-builder{
+    border-top: 5px solid var(--primary-red);
+  }
+  .karma{
+    border-top: 5px solid var(--primary-orange);
+  }
+  .calculator{
+    border-top: 5px solid var(--primary-blue);
+  }
+
+
+
+  frame-l {
+     aspect-ratio: 16 / 9;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  frame-l > img,
+  frame-l > video {
+    inline-size: 86%;
+    block-size: 86%;
+    object-fit: cover;
+  }
+
+  icon-l svg {
+    height: 0.75em;
+    height: 1cap;
+    width: 0.75em;
+    width: 1cap;
+  }
+
+  .card-grid{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2.4rem;
+  }
+
+  .card-grid h3{
+    font-size: 1.3rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+    color: var(--neutral-very-dark-blue);
+    margin-block-end: 1.7rem;
+  }
+
+  .card-grid p{
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: var(--neutral-grayish-blue);
+    line-height: 2;
+    margin-block-end: 4rem;
+  }
+
+  
+  @media screen and (min-width: 700px){
+      
+    .card-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        margin-block-start: 0;
+    
+    }
+    
+    .supervisor {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    
+    .team-builder {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    
+    .karma {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    
+    .calculator {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    
+      }
+    
+    
+    
+
+
+  @media screen and (min-width: 1440px){
+      
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    margin-block-start: 0;
+
+}
+
+.supervisor {
+    grid-column: 1/2;
+    grid-row: 2/4;
+}
+
+.team-builder {
+    grid-column: 2/3;
+    grid-row: 1/3;
+}
+
+.karma {
+    grid-column: 2/3;
+    grid-row: 3/5;
+}
+
+.calculator {
+    grid-column: 3/4;
+    grid-row: 2/4;
+}
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: 700;
+}
+
+header h2 {
+    font-size: 1.5em;
+    color: #555;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+header p {
+    color: #777;
+    font-size: 1.1em;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+}
+
+.card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #555;
+    font-size: 0.95em;
+}
+*/
+
+/* Specific styles for each card */
+/*
+.supervisor {
+    border-top: 5px solid #00bfa5;
+}
+
+.team-builder {
+    border-top: 5px solid #ff5252;
+}
+
+.karma {
+    border-top: 5px solid #ffab00;
+}
+
+.calculator {
+    border-top: 5px solid #2979ff;
+}
+    */
+
+
+/* Responsive Design for Mobile */
+/* @media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+} */
+
