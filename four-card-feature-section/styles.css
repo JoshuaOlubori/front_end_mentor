@@ -96,7 +96,7 @@
     font-weight: 500;
     font-style: normal;
 
-    font-size: var(--s1);
+    font-size: 2rem;
     color: var(--neutral-very-dark-blue);
     margin-block-end: 3.4rem;
   }
@@ -300,33 +300,5 @@ stack-l {
 }
 
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
