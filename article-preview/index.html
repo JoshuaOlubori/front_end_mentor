@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Article Preview - Frontend Mentor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body
+    class="h-full bg-[#f0f4fa] md:h-screen md:flex md:items-center md:justify-center"
+  >
+    <article
+      class="md:drop-shadow-lg md:relative md:max-w-[800px] md:flex block box-content mx-auto max-w-[500px] py-12"
+    >
+      <div
+        class="aspect-[16/9] overflow-hidden flex justify-center items-center rounded-t-xl md:rounded-none md:rounded-l-xl"
+      >
+        <img
+          src="./assets/drawers.jpg"
+          alt="drawers"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div
+        id="siblingOfAlert"
+        class="md:py-7 bg-white block flex flex-col justify-start px-8 pb-5 rounded-b-xl md:rounded-none md:rounded-r-xl"
+      >
+        <h2 class="manrope-700 text-[#5a6674] text-2xl mt-6 md:mt-0">
+          Shift the overall look and feel by adding these wonderful touches to
+          furniture in your home
+        </h2>
+        <p class="text-[#5a6674] text-xl md:text-lg mt-4">
+          Ever been in a room and felt like something was missing? Perhaps it
+          felt slightly bare and uninviting. I’ve got some simple tips to help
+          you make any room feel complete.
+        </p>
+
+        <div class="flex flex-wrap justify-between items-center mt-10">
+          <div>
+            <img
+              src="./assets/avatar-michelle.jpg"
+              alt="avatar-michelle"
+              class="w-1/3 h-1/3 object-cover rounded-full"
+            />
+          </div>
+          <div class="flex flex-col justify-start ml-[-240px] md:ml-[-300px]">
+            <p class="manrope-700 text-[#5a6674] text-lg">Michelle Appleton</p>
+            <time datetime="2020-06-28" class="text-[#5a6674] text-lg"
+              >28 Jun 2020</time
+            >
+          </div>
+
+          <a
+            id="share"
+            href="#"
+            class="block bg-[#f0f4fa] overflow-hidden flex justify-center items-center w-8 h-8 rounded-full"
+          >
+            <!-- <img
+              src="./assets/icon-share.svg"
+              alt="share icon"
+              class="w-5 h-5 object-cover rounded-full"
+            /> -->
+
+            <svg
+              class="w-full h-full p-[8px] object-cover rounded-full"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill="#6E8098"
+                d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div
+        id="alert"
+        class="hidden py-4 rounded-b-md bg-[#39424e] flex flex-wrap justify-around items-center"
+      >
+        <p class="manrope-500 text-[#5a6674] uppercase tracking-[6px]">share</p>
+
+        <div class="icons flex flex-wrap justify-start items-start">
+          <div
+            class="overflow-hidden flex justify-center items-center w-12 h-12"
+          >
+            <img
+              class="w-5 h-5 object-cover"
+              src="./assets/icon-facebook.svg"
+              alt="facebook icon"
+            />
+          </div>
+          <div
+            class="overflow-hidden flex justify-center items-center w-12 h-12"
+          >
+            <img
+              class="w-5 h-5 object-cover"
+              src="./assets/icon-twitter.svg"
+              alt="twitter icon"
+            />
+          </div>
+          <div
+            class="overflow-hidden flex justify-center items-center w-12 h-12"
+          >
+            <img
+              class="w-5 h-5 object-cover"
+              src="./assets/icon-pinterest.svg"
+              alt="pinterest icon"
+            />
+          </div>
+        </div>
+
+        <div
+          id="share-inner"
+          class="bg-[#a2b1c6] overflow-hidden flex justify-center items-center w-8 h-8 rounded-full"
+        >
+          <!-- <img
+            src="./assets/icon-share.svg"
+            alt=""
+            class="w-5 h-5 object-cover rounded-full"
+          /> -->
+          <svg
+            class="w-full h-full p-[8px] object-cover rounded-full"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill="#fff"
+              d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <!-- LARGE ALERT -->
+
+      <div
+        id="alert-md"
+        class="drop-shadow-lg md:hidden hidden md:block alert-md absolute left-[580px] top-[180px]"
+      >
+        <div
+          class="rounded-md rect-with-triangle relative w-fit h-[50px] bg-[#39424e] m-[50px] after:content-[''] after:absolute after:-bottom-50 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-0 after:border-l-[20px] after:border-r-[20px] after:border-t-[20px] after:border-l-transparent after:border-r-transparent after:border-t-[#39424e]"
+        >
+          <div
+            class="rounded-md bg-[#39424e] p-0 pl-2 flex flex-row justify-around items-center"
+          >
+            <p
+              class="manrope-500 text-[#5a6674] text-xs uppercase tracking-[6px]"
+            >
+              share
+            </p>
+
+            <div class="icons flex flex-row justify-start items-start">
+              <div
+                class="overflow-hidden flex justify-center items-center w-12 h-12"
+              >
+                <img
+                  class="w-5 h-5 object-cover"
+                  src="./assets/icon-facebook.svg"
+                  alt="facebook icon"
+                />
+              </div>
+              <div
+                class="overflow-hidden flex justify-center items-center w-12 h-12"
+              >
+                <img
+                  class="w-5 h-5 object-cover"
+                  src="./assets/icon-twitter.svg"
+                  alt="twitter icon"
+                />
+              </div>
+              <div
+                class="overflow-hidden flex justify-center items-center w-12 h-12"
+              >
+                <img
+                  class="w-5 h-5 object-cover"
+                  src="./assets/icon-pinterest.svg"
+                  alt="pinterest icon"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </body>
+</html>
